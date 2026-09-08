@@ -1,12 +1,15 @@
 # React To-Do List
 
-A simple To-Do List application built using React.js.
+A To-Do List application built using React.js.
 
 ## Features
 
 - Add tasks
 - Delete tasks
 - Mark tasks as completed
+- Save in local storage
+- Edit task
+- Filter task like all, complete, pending
 
 ## Technologies
 
@@ -25,7 +28,6 @@ todo-app/
 │   │   └── screenshot.png
 │   ├── components/
 │   │   ├── TodoForm.jsx
-│   │   ├── TodoList.jsx
 │   │   └── TodoItem.jsx
 │   ├── App.jsx
 │   ├── main.jsx
@@ -34,6 +36,9 @@ todo-app/
 ├── package.json
 └── README.md
 ```
+## Project Screenshot
+
+![TODO-List](src/assets/screenshot.png)
 
 ## React Concepts
 
@@ -43,6 +48,8 @@ todo-app/
 - Event Handling
 - map()
 - filter()
+- useEffect
+- localStorage
 
 ## Run Locally
 
