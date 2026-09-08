@@ -38,7 +38,7 @@ todo-app/
 ```
 ## Project Screenshot
 
-![TODO-List](src/assets/screenshot.png)
+![Todo-List](src/assets/screenshot.png)
 
 ## React Concepts
 
