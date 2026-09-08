@@ -1,35 +1,15 @@
-import {useState} from "react";
-
-function TodoForm({addTodo}) {
-
-    const [text, setText] = useState("");
-
-    function handleSubmit(e) {
-
-        e.preventDefault();
-
-        if (text.trim() === ""){
-
-            return;
-        }
-
-        addTodo(text);
-
-        setText("");
-
-    }
+function TodoForm({task, handleChange, handleKeyDown, addTodo}) {
 
     return (
 
-        <form onSubmit = {handleSubmit}>
+        <div>
+            <input type="text" value={task} onChange={handleChange} onKeyDown={handleKeyDown} placeholder="Enter a Task"/>
 
-            <input type="text" placeholder="Enter a task" value={text} onChange = {(e) => setText(e.target.value)} />
-
-            <button type="submit">
+            <button type="button" onClick={addTodo}>
                 Add
             </button>
 
-         </form>
+         </div>
     );
 }
 
