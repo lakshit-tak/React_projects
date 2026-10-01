@@ -10,7 +10,7 @@ body {
     margin: 50px auto;
     text-align: center;
     padding-top: 10px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 input {
@@ -20,7 +20,8 @@ input {
     outline: none;
     border-radius: 8px;
 }
-input:focus{
+
+input:focus {
     border-color: #667eea;
 }
 
@@ -34,6 +35,7 @@ button {
     border-radius: 8px;
     transition: .3s;
 }
+
 button:hover {
     transform: scale(1.02);
     background: #40d72c;
@@ -49,6 +51,7 @@ button:hover {
     border-radius: 8px;
     transition: .3s;
 }
+
 .delete:hover {
     transform: scale(1.02);
     background: crimson;

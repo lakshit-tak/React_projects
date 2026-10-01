@@ -36,10 +36,6 @@ todo-app/
 ├── package.json
 └── README.md
 ```
-## Project Screenshot
-
-![Todo-List](src/assets/screenshot.png)
-
 ## React Concepts
 
 - Components
@@ -50,6 +46,11 @@ todo-app/
 - filter()
 - useEffect
 - localStorage
+
+## Project Screenshot
+
+![Todo-List](src/assets/Screenshot.png)
+
 
 ## Run Locally
 

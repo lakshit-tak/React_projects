@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import TodoForm from "./components/TodoForm.jsx";
 import TodoList from "./components/TodoList.jsx";
 
@@ -6,7 +6,7 @@ function App() {
 
     const [task, setTask] = useState("");
 
-    const [todos, setTodos] = useState( () => {
+    const [todos, setTodos] = useState(() => {
 
         const savedTodos = localStorage.getItem("todos");
 
@@ -16,11 +16,11 @@ function App() {
 
     const [filter, setFilter] = useState("all");
 
-    useEffect( () => {
+    useEffect(() => {
 
         localStorage.setItem("todos", JSON.stringify(todos));
 
-    },[todos]);
+    }, [todos]);
 
     function handleChange(e) {
 
@@ -30,7 +30,7 @@ function App() {
 
     function addTodo() {
 
-        if (task.trim() === ""){
+        if (task.trim() === "") {
             return;
         }
 
@@ -43,7 +43,7 @@ function App() {
 
         setTodos([...todos, newTodo]);
         setTask("");
-        
+
     }
 
     function handleKeyDown(e) {
@@ -68,7 +68,7 @@ function App() {
         const newTodos = todos.map((todo) => {
             if (todo.id === id) {
 
-                return {...todo, completed: !todo.completed};
+                return { ...todo, completed: !todo.completed };
 
             }
 
@@ -82,16 +82,16 @@ function App() {
 
         const newText = prompt("Edit your task");
 
-        if (newText === null || newText.trim() === ""){
+        if (newText === null || newText.trim() === "") {
             return;
         }
 
         const newTodos = todos.map((todo) => {
 
-            if(todo.id === id) {
+            if (todo.id === id) {
 
                 return {
-                    ...todo, text:newText
+                    ...todo, text: newText
                 };
             }
             return todo;
@@ -106,7 +106,7 @@ function App() {
             return todo.completed === true;
         }
 
-        if(filter === "pending") {
+        if (filter === "pending") {
 
             return todo.completed === false;
         }
@@ -115,21 +115,21 @@ function App() {
     });
 
     return (
-        <div className = "container">
+        <div className="container">
 
             <h1>Todo List </h1>
 
-            <TodoForm 
-              task={task}
-              handleChange={handleChange}
-              handleKeyDown={handleKeyDown}
-              addTodo={addTodo}
-              />
+            <TodoForm
+                task={task}
+                handleChange={handleChange}
+                handleKeyDown={handleKeyDown}
+                addTodo={addTodo}
+            />
 
-              <div>
+            <div>
                 <button onClick={() => setFilter("all")}>
                     All
-                 </button>
+                </button>
 
                 <button onClick={() => setFilter("completed")}>
                     Completed
@@ -141,13 +141,13 @@ function App() {
 
             </div>
 
-            <TodoList 
-             todos={filterdTodos}
-             toggleTodo={toggleTodo}
-             deleteTodo={deleteTodo}
-             editTodo={editTodo}
-             />
-             </div>
+            <TodoList
+                todos={filterdTodos}
+                toggleTodo={toggleTodo}
+                deleteTodo={deleteTodo}
+                editTodo={editTodo}
+            />
+        </div>
     );
 }
 

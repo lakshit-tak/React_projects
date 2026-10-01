@@ -50,7 +50,7 @@ Notes-App/
 
 ## Project Screenshot
 
-![Notes-App](src/assets/screenshot.png)
+![Notes-App](src/assets/Screenshot.png)
 
 
 
