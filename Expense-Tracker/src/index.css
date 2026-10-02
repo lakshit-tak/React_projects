@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+
+    min-height: 100vh;
+    background: linear-gradient(45deg, rgb(229, 130, 238), rgb(225, 240, 15));
+
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.expense-tracker {
+
+    width: 100%;
+    max-width: 800px;
+    background-color: aliceblue;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.expense-tracker h1,h2 {
+
+    text-align: center;
+    color: #333;
+    margin: 20px;
+}
+
+.expense-tracker select {
+    border: 2px solid palevioletred;
+    color: rgb(191, 21, 151);
+    padding: 10px;
+    outline: none;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+    border-radius: 20px;
+    height: 45px;
+
+}
+
+.input-box {
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input {
+
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    font-size: 16px;
+    outline: none;
+}
+
+.input:focus {
+    border-color: #667eea;
+}
+
+.Btn {
+
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #667eea;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.Btn:hover {
+    background: #4f5fd1;
+    transform: scale(1.02);
+}
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete {
+
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.delete:hover {
+    background: crimson;
+    transform: scale(1.02);
+}
+
+.expenseList {
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 50px;
+    padding: 5px;
+    border-radius: 10px;
+    
+    background-color: white;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 12px 15px;
+
+    gap: 10px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
